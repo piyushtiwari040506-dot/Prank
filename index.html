@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loading…</title>
+  <style>
+    body {
+      background: black;
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial;
+      font-size: 22px;
+      text-align: center;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body onclick="playSound()">
+  Tap anywhere to continue…
+
+  <audio id="sound">
+    <source src="sound.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function playSound() {
+      document.getElementById("sound").play();
+      document.body.innerHTML = "😂 GOT YOU!";
+    }
+  </script>
+</body>
+</html>
