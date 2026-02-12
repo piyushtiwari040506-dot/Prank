@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Got You 😜</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+    }
+    button {
+      font-size: 20px;
+      padding: 15px 25px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>😂 GOT YOU!</h2>
+<button onclick="playSound()">Tap to Continue</button>
+
+<audio id="sound" src="sound.mp3"></audio>
+
+<script>
+  function playSound() {
+    const audio = document.getElementById("sound");
+    audio.play().catch(err => alert("Sound blocked by browser"));
+  }
+</script>
+
+</body>
+</html>
